@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_coleccionista"
+    app:startDestination="@id/coleccionistaFragment">
+
+    <fragment
+        android:id="@+id/coleccionistaFragment"
+        android:name="co.edu.uniandes.fourbidden.vinilos.vista.fragmentos.ColeccionistaFragment"
+        android:label="@string/titulolistacoleccionistas"
+        android:textColor="@color/black"
+        tools:layout="@layout/fragment_coleccionista" >
+        <action
+            android:id="@+id/action_coleccionistaFragment_to_fragmentDetalleColeccionista"
+            app:destination="@id/fragmentDetalleColeccionista" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fragmentDetalleColeccionista"
+        android:name="co.edu.uniandes.fourbidden.vinilos.vista.fragmentos.DetalleColeccionistaFragment"
+        android:label="@string/titulodetallecoleccionista"
+        tools:layout="@layout/detalle_coleccionista" >
+        <argument
+            android:name="coleccionistaId"
+            app:argType="integer" />
+    </fragment>
+</navigation>
